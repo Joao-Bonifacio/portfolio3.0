@@ -8,8 +8,10 @@ const Home = () => {
     <div className="bg-gray-100 min-h-screen">
       <Header />
       <main className="container mx-auto px-4 py-6">
-        <AboutMe />
-        <Projects />
+        <div className="flex flex-wrap w-full">
+          <AboutMe />
+          <Projects />
+        </div>
         <section>
           <h2 className="text-xl font-bold text-gray-800">Contact</h2>
           <p className="mt-2 text-gray-600">
