@@ -1,18 +1,13 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import AboutMe from "@/components/About"
 
 const Home = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Header />
       <main className="container mx-auto px-4 py-6">
-        <section className="mb-8">
-          <h2 className="text-xl font-bold text-gray-800">About Me</h2>
-          <p className="mt-2 text-gray-600">
-            Hi, Im John Doe, a passionate web developer with experience in
-            building modern and responsive websites.
-          </p>
-        </section>
+        <AboutMe />
         <section className="mb-8">
           <h2 className="text-xl font-bold text-gray-800">Projects</h2>
           <ul className="mt-2 text-gray-600">
