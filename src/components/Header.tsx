@@ -7,7 +7,6 @@ export default function Header() {
         <nav className="container px-4 py-6 w-[48%] mr-5 flex justify-end">
             <Link href="/">Home</Link>
             <Link href="/sobre" className="ml-4">Sobre</Link>
-            <Link href="/contato" className="ml-4">Contato</Link>
         </nav>
     </header>
     ) 

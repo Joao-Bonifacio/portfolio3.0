@@ -5,7 +5,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs"
 
 export default function Projects() {
     return (
-    <section className="mb-8 w-full md:w-2/3 mx-auto">
+    <section className="mb-4 w-full md:w-2/3 mx-auto">
         <div className="ml-2 bg-gray-200 shadow-md">
             <h2 className="bg-blue-700 text-xl font-bold text-gray-200 p-3 rounded-tl-md rounded-tr-md">Projetos</h2>
             <ul className="mt-2 text-gray-600 p-5">
