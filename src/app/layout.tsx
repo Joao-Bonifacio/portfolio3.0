@@ -15,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
+      <head>
+        <link rel="icon" href="/icons/livro.png" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
