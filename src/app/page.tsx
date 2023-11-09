@@ -1,8 +1,8 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import AboutMe from "@/components/About"
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
+import Projects from "@/components/Projects"
+import Contact from "@/components/Contact"
 
 const Home = () => {
   return (
