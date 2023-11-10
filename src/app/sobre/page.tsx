@@ -8,7 +8,7 @@ export default function About() {
     return (
     <div className="bg-white h-screen">
         <Header />
-        <div className="flex flex-wrap justify-start bg-blue-200">
+        <div className="flex flex-wrap justify-center bg-blue-200">
             <div className="p-5 w-200px md:w-1/3 rounded-xl mx-auto">
                 <div className="rounded-full bg-blue-700 w-[200px] h-[200px] p-3">
                     <div className="rounded-full w-[170px] h-[170px] bg-gray-300 mx-auto my-auto p-2">
