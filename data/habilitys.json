@@ -1,0 +1,74 @@
+[
+    {
+        "title": "HTML + CSS",
+        "desc": "Utilizado na construção e estilização de páginas web voltadas para o front-end da aplicação (com códigos interpretados pelo navegador do usuário)."
+    },
+    {
+        "title": "JavaScript",
+        "desc": "Utilizado para adicionar interatividade a aplicação web e fazer requisições ao servidor ou chamadas de APIs."
+    },
+    {
+        "title": "Node",
+        "desc": "Utilizado para usar o JavaScript/TypeScript no back-end (executado em servidor), e possibilitar o uso de alguns frameworks e bibliotecas como o React."
+    },
+    {
+        "title": "React",
+        "desc": "Utilizado para aumentar a performance da aplicação web com renderizações sob demanda com o formato de construção em components tendo como base o JSX."
+    },
+    {
+        "title": "TypeScipt",
+        "desc": "Pode ser considerado a evolução do JavaScript, adicionando tipagens estáticas e previnindo erros em tempo de execução da aplicação."
+    },
+    {
+        "title": "Next",
+        "desc": "Utilizado para possibilitar o uso do react no back-end (lado servidor), renderizando as páginas antes do usuário ter acesso, ranqueando melhor em motores de busca."
+    },
+    {
+        "title": "Git",
+        "desc": "Permite armazenar diferentes verções do código e navegar entre essas verções, aumentando a produtividade e evitando riscos de perder o código."
+    },
+    {
+        "title": "Linux",
+        "desc": "O uso do terminal do linux permite ter um controle maior sobre o servidor, e facilita o uso de muitas ferramentas de programação e cyber security."
+    },
+    {
+        "title": "Express",
+        "desc": "Utilizado para facilitar a construção de rotas de acesso ao servidor, as rotas são construidas em conjunto com o node e JavaScript/Typescript."
+    },
+    {
+        "title": "MySQL",
+        "desc": "Banco de dados relacional, utilizado para guardar dados em tabelas e colunas relacionadas entre si, com linguágem própria de manipulação dos dados."
+    },
+    {
+        "title": "MongoDB",
+        "desc": "Banco de dados não relacional, utilizado para guardar dados em coleções sequenciais de grupos de dados."
+    },
+    {
+        "title": "Bootstrap e Tailwind",
+        "desc": "Utilizados para facilitar a estilização de páginas web com componentes prontos ou atribuição de classes, substituindo os atributos de arquivos de CSS."
+    },
+    {
+        "title": "Python",
+        "desc": "Utilizado para muitos propósitos, sendo meu objetivo, usa-lo para construção de aplicações de linha de comando, os chamados CLIs (Comand Line Interfaces)."
+    },
+    {
+        "title": "Cyber Security",
+        "desc": "Com foco na segurança ofensiva, tem grande utilidade para descobrir e corrigir falhas de segurança e vulnerabilidades na aplicação."
+    },
+    {
+        "title": "Docker",
+        "desc": "Utilizado para isolar os softwares em containers, onde podem ser duplicados ou substituidos de acordo com a demanda, com a utilização de virtualização."
+    },
+    {
+        "title": "Mercado financeiro",
+        "desc": "Útil para objetivos pessoais como buscar rentabilidade com diferentes ativos ou programar para resolução de problemas e automações relacionadas a essa área."
+    },
+    {
+        "title": "Inglês",
+        "desc": "Útil para ampliar o horizonte de busca de conhecimento e atualização em menos tempo das novidades sobre diversos assuntos, como tecnologia."
+    },
+    {
+        "title": "Desenho (hobby)",
+        "desc": "Útil para passar o tempo enquanto desentressa e com possibilidade de profissionalização com o aprimoramento da prática."
+    }
+]
