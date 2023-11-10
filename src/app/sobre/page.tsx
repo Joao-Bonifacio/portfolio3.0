@@ -23,7 +23,7 @@ export default function About() {
                         <span className="text-blue-600">Assistente de professor de robótica</span>: Ensino de montagem e programação de robôs para alunos do fundamental.
                     </p>
                     <p className="text-justify p-4 bg-gray-100 rounded-b-md">
-                        <span className="text-blue-600">Agente Censitário Supervisor(ACS - IBGE)</span>: Auxilio e supervisão dos trabalhos realizados por recenseadores durante o censo demográfico do IBGE.
+                        <span className="text-blue-600">Agente Censitário Supervisor(ACS - IBGE):</span> Auxilio e supervisão dos trabalhos realizados por recenseadores durante o censo demográfico do IBGE.
                     </p>
                 </div>
             </div>
@@ -36,16 +36,16 @@ export default function About() {
                     Sempre fui facinado em entender o funcionamento das coisas ao meu redor, escolhi a área da computação por explorar muito a parte de funcionamento de sistemas, além da liberdade criativa que essa área pode proporcionar enquanto posso evoluir meu conhecimento agregando valor para outras pessoas.
                 </p>
                 <p className="text-justify p-4 bg-gray-100">
-                    Enquanto a área de economia, acredito que possa ser uma ótima base para entender melhor os "bastidores" do mundo em que vivemos.
+                    Enquanto a área de economia, acredito que possa ser uma ótima base para entender melhor os &#34;bastidores&#34; do mundo em que vivemos.
                 </p>
             </div>
             <div className="max-w-xl md:w-1/2 px-4 pt-4">
                 <h4 className="bg-blue-700 text-xl mb-2bg-blue-700 font-bold text-gray-200 p-3 rounded-tl-md rounded-tr-md">Graduações</h4>
                 <p className="text-justify p-4 bg-gray-100">
-                    <span className="text-blue-600">Ciências da computação</span>: Estácio - Estimativa de formatura para 2025.
+                    <span className="text-blue-600">Ciências da computação:</span> Estácio - Estimativa de formatura para 2025.
                 </p>
                 <p className="text-justify px-4 pb-4 bg-gray-100 rounded-b-md">
-                    <span className="text-blue-600">Economia</span>: Estácio - Estimativa de formatura para 2027.
+                    <span className="text-blue-600">Economia:</span> Estácio - Estimativa de formatura para 2027.
                 </p>
                 <CV />
             </div>
