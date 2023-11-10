@@ -9,7 +9,7 @@ export default function Footer() {
           &copy; 2023 João Júnior.
         </div>
         <div className="flex text-gray-600">
-          <Link href="https://github.com/Joao-Bonifacio" target="blank"> 
+            <Link href="https://github.com/Joao-Bonifacio" target="blank"> 
                 <FaGithub className="mr-3 text-xl hover:text-gray-800" />
             </Link>
             <Link href="https://www.linkedin.com/in/jo%C3%A3o-j%C3%BAnior-7499b6218/" target="blank">

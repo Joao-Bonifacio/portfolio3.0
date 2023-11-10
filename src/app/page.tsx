@@ -3,6 +3,7 @@ import Footer from "@/components/Footer"
 import AboutMe from "@/components/About"
 import Projects from "@/components/Projects"
 import Contact from "@/components/Contact"
+import CV from "@/components/Download_CV"
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
           <div className="w-full md:w-1/3 mx-auto">
             <AboutMe />
             <Contact />
+            <CV />
           </div>
           <Projects />
         </div>
