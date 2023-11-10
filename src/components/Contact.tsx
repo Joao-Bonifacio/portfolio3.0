@@ -1,6 +1,11 @@
 'use client'
 import axios from "axios"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { Client } from "@notionhq/client"
+
+const notion = new Client({
+    auth: process.env.NOTION_API_KEY
+})
 
 interface Data{
     name: string;
@@ -14,15 +19,16 @@ export default function Contact() {
         email: '',
         message: ''
     })
+    //useEffect(submitForm,[])
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const {name, value} = e.target
         setData(oldData => ({...oldData, [name]: value}))
     }
 
-    const submitForm = (e: React.FormEvent) => {
-        e.preventDefault()
-        axios.post('/api/notionMessage.ts', data)
+    const submitForm = async (e: React.FormEvent) => {
+        //e.preventDefault()
+        /*axios.post('/api',data,{})
         .then(() => {
             setData({
                 name: '',
@@ -31,18 +37,50 @@ export default function Contact() {
             })
             alert("Obrigado, irei responder assim que puder 😁")
         })
-        .catch(e => console.log('Erro ao enviar', e.message))
+        .catch(e => console.log('Erro ao enviar', e.message))*/
+        await notion.pages.create({
+            parent: {
+                database_id: process.env.NOTION_DATABASE_ID || ''
+            },
+            properties:{
+                Name: {
+                    type: "title",
+                    title: [{
+                        type: "text",
+                        text: { content:  data.name}
+                    }]
+                },
+                Email: {
+                    type: "email",
+                    email: data.email
+                },
+                Message: {
+                    type: "rich_text",
+                    rich_text: [{
+                        type: "text",
+                        text: {
+                            content: data.message
+                        }
+                    }]
+                }
+            }
+        })
+        .then(() => alert(1))
+        .catch((error) => {
+            console.log(error.message) 
+            //res.status(500).json({message: 'Algo deu errado'})
+        })
     }
 
     return (
     <section className="mx-auto mr-2">
         <h2 className="bg-blue-700 text-xl font-bold text-gray-200 p-3 rounded-tl-md rounded-tr-md">Entre em contato</h2>
-        <form method="post" onSubmit={submitForm} className="bg-gray-200 p-5 rounded-b-md w-full text-gray-800">
+        <form className="bg-gray-200 p-5 rounded-b-md w-full text-gray-800">
             <input type="text" name="name" value={data.name} onChange={handleChange} placeholder="Nome:" required className="p-3 rounded-md w-full min-w-7 mb-3"/>
             <input type="email" name="email" value={data.email} onChange={handleChange} placeholder="Email (opcional):" className="p-3 rounded-md w-full min-w-7 mb-3"/>
             <textarea name="message" value={data.message} onChange={handleChange} placeholder="Mensagem:" required className="p-3 rounded-md w-full mb-5" style={{resize:'none'}}></textarea>
             <div className="text-center text-gray-200">
-                <button type="submit" className="px-7 py-2 bg-blue-500 rounded-md hover:bg-blue-700"> Enviar </button>
+                <button  className="px-7 py-2 bg-blue-500 rounded-md hover:bg-blue-700" onClick={submitForm}> Enviar </button>
             </div>
         </form>
     </section>
