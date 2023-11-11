@@ -27,8 +27,10 @@ export default function Contact() {
     }
 
     const submitForm = async (e: React.FormEvent) => {
-        //e.preventDefault()
-        /*axios.post('/api',data,{})
+        e.preventDefault()
+        axios.post('/api/',data,{
+            params: {...data}
+        })
         .then(() => {
             setData({
                 name: '',
@@ -37,39 +39,7 @@ export default function Contact() {
             })
             alert("Obrigado, irei responder assim que puder 😁")
         })
-        .catch(e => console.log('Erro ao enviar', e.message))*/
-        await notion.pages.create({
-            parent: {
-                database_id: process.env.NOTION_DATABASE_ID || ''
-            },
-            properties:{
-                Name: {
-                    type: "title",
-                    title: [{
-                        type: "text",
-                        text: { content:  data.name}
-                    }]
-                },
-                Email: {
-                    type: "email",
-                    email: data.email
-                },
-                Message: {
-                    type: "rich_text",
-                    rich_text: [{
-                        type: "text",
-                        text: {
-                            content: data.message
-                        }
-                    }]
-                }
-            }
-        })
-        .then(() => alert(1))
-        .catch((error) => {
-            console.log(error.message) 
-            //res.status(500).json({message: 'Algo deu errado'})
-        })
+        .catch(e => console.log('Erro ao enviar', e.message))
     }
 
     return (

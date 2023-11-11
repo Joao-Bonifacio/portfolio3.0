@@ -1,15 +1,22 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest } from "next"
 import { Client } from "@notionhq/client"
+
+interface DTO {
+    name: string,
+    email: string,
+    message: string,
+}
+interface Data {
+    request: NextApiRequest,
+    searchParams: DTO
+}
 
 const notion = new Client({
     auth: process.env.NOTION_API_KEY
 })
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse){
-    console.log(req)
-    // eslint-disable-next-line
+export default async function handler(req: Data){
     const { name, email, message } = req.searchParams
-    console.log(name,email,message)
     await notion.pages.create({
         parent: {
             database_id: process.env.NOTION_DATABASE_ID || ''
@@ -22,10 +29,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     text: { content:  name}
                 }]
             },
+
             Email: {
                 type: "email",
                 email: email
             },
+
             Message: {
                 type: "rich_text",
                 rich_text: [{
@@ -36,10 +45,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 }]
             }
         }
-    })
-    .then(() => res.status(201).json({message: "Sucesso"}))
-    .catch((error) => {
-        console.log(error.message) 
-        res.status(500).json({message: 'Algo deu errado'})
     })
 }
