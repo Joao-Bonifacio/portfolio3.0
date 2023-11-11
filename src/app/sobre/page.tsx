@@ -2,7 +2,7 @@ import Image from "next/image"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CV from "@/components/Download_CV";
-import * as habilitys from "@data/habilitys.json"
+import habilitys from "@data/habilitys.json"
 
 export default function About() {
     return (

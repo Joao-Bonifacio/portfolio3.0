@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation"
 import Image from "next/image"
 import Header from "@/components/Header"
-import * as projects from "@data/projects.json"
+import projects from "@data/projects.json"
 import Error404 from "@/app/404"
 
 export default function Projects() {
