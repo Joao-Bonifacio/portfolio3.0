@@ -1,4 +1,3 @@
-import type { NextApiRequest } from "next"
 import { Client } from "@notionhq/client"
 
 interface DTO {
@@ -7,7 +6,6 @@ interface DTO {
     message: string,
 }
 interface Data {
-    request: NextApiRequest,
     searchParams: DTO
 }
 
@@ -46,5 +44,5 @@ export default async function handler(req: Data){
             }
         }
     })
-    return;
+    return <></>
 }
